@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: npm install, build, and test
-      run: |
-        npm start
-      env:
-        CI: true
+      with:
+        node-version: '14'
+  - run: npm install
+  - run: npm test
