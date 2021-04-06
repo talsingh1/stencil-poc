@@ -7,8 +7,10 @@
 import { HTMLStencilElement, JSXBase } from "./stencil-public-runtime";
 export namespace Components {
     interface ComponentOne {
+        "color": string;
     }
     interface ComponentTwo {
+        "color": string;
     }
 }
 declare global {
@@ -31,8 +33,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ComponentOne {
+        "color"?: string;
     }
     interface ComponentTwo {
+        "color"?: string;
     }
     interface IntrinsicElements {
         "component-one": ComponentOne;

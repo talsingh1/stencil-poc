@@ -1,4 +1,6 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop  } from '@stencil/core';
+// import 'stencil-props';
+
 
 @Component({
   tag: 'component-one',
@@ -6,11 +8,12 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class CryptoView {
+  @Prop() color: string;
 
   render() {
     return (
       <Host class={'hello'}>
-        I am a component one
+        I am a component one {this.color}
       </Host>
     );
   }
