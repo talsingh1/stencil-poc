@@ -1,4 +1,4 @@
-import { B as BUILD, c as consoleDevInfo, p as plt, w as win, H, d as doc, N as NAMESPACE, a as promiseResolve, b as bootstrapLazy } from './index-50a78bb6.js';
+import { B as BUILD, c as consoleDevInfo, p as plt, w as win, H, d as doc, N as NAMESPACE, a as promiseResolve, b as bootstrapLazy } from './index-169abfef.js';
 import { g as globalScripts } from './app-globals-0f993ce5.js';
 
 /*
@@ -29,7 +29,7 @@ const patchBrowser = () => {
     const scriptElm = BUILD.scriptDataOpts || BUILD.safari10 || BUILD.dynamicImportShim
         ? Array.from(doc.querySelectorAll('script')).find(s => new RegExp(`\/${NAMESPACE}(\\.esm)?\\.js($|\\?|#)`).test(s.src) || s.getAttribute('data-stencil-namespace') === NAMESPACE)
         : null;
-    const importMeta = "";
+    const importMeta = import.meta.url;
     const opts = BUILD.scriptDataOpts ? scriptElm['data-opts'] || {} : {};
     if (BUILD.safari10 && 'onbeforeload' in scriptElm && !history.scrollRestoration /* IS_ESM_BUILD */) {
         // Safari < v11 support: This IF is true if it's Safari below v11.
@@ -56,7 +56,7 @@ const patchBrowser = () => {
         if (BUILD.dynamicImportShim && !win.customElements) {
             // module support, but no custom elements support (Old Edge)
             // @ts-ignore
-            return __sc_import_shop(/* webpackChunkName: "polyfills-dom" */ './dom-bd0bf1dc.js').then(() => opts);
+            return import(/* webpackChunkName: "polyfills-dom" */ './dom-bd0bf1dc.js').then(() => opts);
         }
     }
     return promiseResolve(opts);
@@ -118,5 +118,5 @@ const patchCloneNodeFix = (HTMLElementPrototype) => {
 
 patchBrowser().then(options => {
   globalScripts();
-  return bootstrapLazy([["component-one",[[1,"component-one",{"color":[1]}]]],["component-two",[[1,"component-two",{"color":[1]}]]]], options);
+  return bootstrapLazy([["component-one",[[1,"component-one",{"color":[1]}]]],["component-two",[[1,"component-two",{"color":[1]}]]],["tooltip-parent",[[1,"tooltip-parent",{"color":[1]}]]]], options);
 });

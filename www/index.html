@@ -1,5 +1,6 @@
-<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <script type="module" src="/build/shop.esm.js" data-stencil></script> <script nomodule="" src="/build/shop.js" data-stencil></script> <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/talsingh1/stencil-poc/www/build/shop.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/gh/talsingh1/stencil-poc/www/build/shop.js"></script> --> </head> <body> <component-one color="blue"></component-one> <component-two color="red"></component-two> <component-one color="green"></component-one> <component-two color="yellow"></component-two> <script>
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <!-- <script type="module" src="/build/shop.esm.js"></script>
+    <script nomodule src="/build/shop.js"></script> --> <script src="./widget.js"></script> <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/talsingh1/stencil-poc/www/build/shop.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/gh/talsingh1/stencil-poc/www/build/shop.js"></script> --> </head> <body> <h1>Stencil components dynamically added</h1> <div id="box1"></div> <div id="box2"></div> <div id="box3"></div> <div id="box4"></div> <script>
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {
   // auto-unregister service worker during dev mode
   navigator.serviceWorker.getRegistration().then(function(registration) {

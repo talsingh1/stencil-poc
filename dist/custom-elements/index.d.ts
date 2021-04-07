@@ -14,6 +14,12 @@ export const ComponentTwo: {
   new (): ComponentTwo;
 };
 
+interface TooltipParent extends Components.TooltipParent, HTMLElement {}
+export const TooltipParent: {
+  prototype: TooltipParent;
+  new (): TooltipParent;
+};
+
 /**
  * Utility to define all custom elements within this package using the tag name provided in the component's source. 
  * When defining each custom element, it will also check it's safe to define by:

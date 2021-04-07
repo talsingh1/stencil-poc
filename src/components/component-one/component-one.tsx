@@ -12,8 +12,8 @@ export class CryptoView {
 
   render() {
     return (
-      <Host class={'hello'}>
-        I am a component one {this.color}
+      <Host class={'hello'}  style={{color: `${this.color}`}}>
+      <h1>  I am a component one {this.color} </h1>
       </Host>
     );
   }

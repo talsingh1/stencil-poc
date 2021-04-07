@@ -12,6 +12,9 @@ export namespace Components {
     interface ComponentTwo {
         "color": string;
     }
+    interface TooltipParent {
+        "color": string;
+    }
 }
 declare global {
     interface HTMLComponentOneElement extends Components.ComponentOne, HTMLStencilElement {
@@ -26,9 +29,16 @@ declare global {
         prototype: HTMLComponentTwoElement;
         new (): HTMLComponentTwoElement;
     };
+    interface HTMLTooltipParentElement extends Components.TooltipParent, HTMLStencilElement {
+    }
+    var HTMLTooltipParentElement: {
+        prototype: HTMLTooltipParentElement;
+        new (): HTMLTooltipParentElement;
+    };
     interface HTMLElementTagNameMap {
         "component-one": HTMLComponentOneElement;
         "component-two": HTMLComponentTwoElement;
+        "tooltip-parent": HTMLTooltipParentElement;
     }
 }
 declare namespace LocalJSX {
@@ -38,9 +48,13 @@ declare namespace LocalJSX {
     interface ComponentTwo {
         "color"?: string;
     }
+    interface TooltipParent {
+        "color"?: string;
+    }
     interface IntrinsicElements {
         "component-one": ComponentOne;
         "component-two": ComponentTwo;
+        "tooltip-parent": TooltipParent;
     }
 }
 export { LocalJSX as JSX };
@@ -49,6 +63,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "component-one": LocalJSX.ComponentOne & JSXBase.HTMLAttributes<HTMLComponentOneElement>;
             "component-two": LocalJSX.ComponentTwo & JSXBase.HTMLAttributes<HTMLComponentTwoElement>;
+            "tooltip-parent": LocalJSX.TooltipParent & JSXBase.HTMLAttributes<HTMLTooltipParentElement>;
         }
     }
 }
