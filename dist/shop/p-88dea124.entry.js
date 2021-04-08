@@ -1,0 +1,1 @@
+import{r as o,h as t,H as s}from"./p-3085abf9.js";const r=class{constructor(t){o(this,t)}render(){return t(s,{class:"hello"},t("div",null,console.log(this),t("component-one",{color:this.color}),t("component-two",{color:this.color})))}};export{r as tooltip_parent}

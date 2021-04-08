@@ -1,4 +1,4 @@
-# component-two
+# tooltip-parent
 
 
 
@@ -14,15 +14,17 @@
 
 ## Dependencies
 
-### Used by
+### Depends on
 
- - [tooltip-parent](../tooltip-parent)
+- [component-one](../component-one)
+- [component-two](../component-two)
 
 ### Graph
 ```mermaid
 graph TD;
+  tooltip-parent --> component-one
   tooltip-parent --> component-two
-  style component-two fill:#f9f,stroke:#333,stroke-width:4px
+  style tooltip-parent fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

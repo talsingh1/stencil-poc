@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
+    "start": "stencil build --prod --watch --serve --es5",
     "generate": "stencil generate"
   },
   "dependencies": {

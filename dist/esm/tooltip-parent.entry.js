@@ -1,4 +1,4 @@
-import { r as registerInstance, h, e as Host } from './index-169abfef.js';
+import { r as registerInstance, h, H as Host } from './index-8343f927.js';
 
 const CryptoView = class {
   constructor(hostRef) {

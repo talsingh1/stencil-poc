@@ -1,0 +1,14 @@
+{
+  "entries": [
+    "./components/component-one/component-one.js",
+    "./components/component-two/component-two.js",
+    "./components/tooltip-parent/tooltip-parent.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.5.2",
+    "typescriptVersion": "4.2.3"
+  },
+  "collections": [],
+  "bundles": []
+}
